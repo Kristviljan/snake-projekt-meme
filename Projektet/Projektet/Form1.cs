@@ -14,6 +14,10 @@ namespace Projektet
     {
         public Form1()
         {
+            Text = "SNAKE";
+            Width = 800;
+            Height = 600;
+            DoubleBuffered = true;
             InitializeComponent();
         }
     }
