@@ -14,9 +14,9 @@ namespace Projektet
         public Food (int x, int y, Type type) : base(x,y)
         {
         }
-        override public void Draw(Graphics g)
+        /*override public void Draw(Graphics g)
         {
             g.DrawRectangle(pen, point.X, point.Y, 50, 50);
-        }
+        }*/
     }
 }
