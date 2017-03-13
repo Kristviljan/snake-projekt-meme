@@ -12,9 +12,6 @@ namespace Projektet
 {
     public partial class Form1 : Form
     {
-        Graphics g;
-        SolidBrush brush = new SolidBrush(Color.Black);
-        //public Snake snake = new Snake(400, 300);
 
 
         public Form1()
@@ -22,7 +19,6 @@ namespace Projektet
             this.BringToFront();
             this.Focus();
             this.KeyPreview = true;
-            //this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
             InitializeComponent();
         }
 

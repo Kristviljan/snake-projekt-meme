@@ -27,8 +27,9 @@ namespace Projektet
         {
             
             form.Paint += new PaintEventHandler(Draw);
-            
-            
+
+            snake.AddBody();
+            snake.AddBody();
             
             timer.Interval = 1000 / 60;
             timer.Tick += new EventHandler(TimerEventHandler);
