@@ -14,6 +14,7 @@ namespace Projektet
         public int dir = 0;
         private int i;
         private int speed = 5;
+        public int score = 0;
 
         private Timer snakeTimer;
         
