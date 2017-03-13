@@ -17,9 +17,9 @@ namespace Projektet
         {
             Engine engine = new Engine();
             engine.Run();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.EnableVisualStyles();  // dessa verkar inte behövas eftersom våran form finns 
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
         }
     }
 }
