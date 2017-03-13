@@ -9,6 +9,24 @@ namespace Projektet
     {
         public Engine()
         {
+            Timer timer;
+            Form1 form;
+        }
+        public void Run()
+        {
+
+        }
+        public void AddFood()
+        {
+
+        }
+        private void TimerEventHandler(Object obj, EventArgs args)
+        {
+
+        }
+        private void Draw(Object obj, PaintEventArgs args)
+        {
+
         }
     }
 }
