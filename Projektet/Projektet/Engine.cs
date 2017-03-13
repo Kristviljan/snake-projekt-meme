@@ -62,14 +62,14 @@ namespace Projektet
         private void TimerEventHandler(object sender, EventArgs e)
         {
             AddFood();
-            form.snake.Move();
+            //form.snake.Move();
             form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
             form.snake.Head.Draw(args.Graphics);
-            Food fod = new Food(50,50,Food.Type.standard );
-          //  fod.Draw(args.Graphics);
+            //Food fod = new Food(50,50,Food.Type.standard );
+            //fod.Draw(args.Graphics);
             foreach(var food in foods)
             {
                 food.Draw(args.Graphics);
