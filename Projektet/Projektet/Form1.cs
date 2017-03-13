@@ -54,10 +54,10 @@ namespace Projektet
         {
             
         }
-        public void Scores(Object sender, PaintEventArgs e, int score)
+        public void Scores(Object sender, PaintEventArgs e, int score1, int score2)
         {
-            label6.Text = score.ToString();
-            label7.Text = score.ToString();
+            label6.Text = score1.ToString();
+            label7.Text = score2.ToString();
         }
         /*public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
 {

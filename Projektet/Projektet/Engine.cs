@@ -164,7 +164,7 @@ namespace Projektet
             //form.snake.Head.Draw(args.Graphics);
 
 
-            form.Scores(obj, args, snake.points);
+            form.Scores(obj, args, snake.points, snake2.points);
 
 
             foreach (var Body in snake.bodies)
