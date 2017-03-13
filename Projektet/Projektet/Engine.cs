@@ -105,7 +105,7 @@ namespace Projektet
                 {
                     //this.snake.score++;
                     snake.AddBody();
-                    snake.Speed++;
+                    food.Eat(snake);
                     foods.Remove(food);
                     break;
                 }
