@@ -9,29 +9,28 @@ namespace Projektet
 {
     public class Food : Rectangle
     {
-        public enum Types { standard, bonus, speed, slow }
-        Types type;
+        private int type;
 
-        public Food (int x, int y, Types types) : base(x,y)
+        public Food (int x, int y, int type) : base(x,y)
         {
-            this.type = types;
+            this.type = type;
             Colour();
         }
         private void Colour()
         {
-            if ((int)this.type == 0)
+            if (this.type >= 0 && this.type <= 33)
             {
                 this.brush.Color = Color.Green;
             }
-            else if ((int)type == 1)
+            else if (this.type > 33 && this.type <= 66)
             {
                 this.brush.Color = Color.Gold;
             }
-            else if ((int)type == 2)
+            else if (this.type > 66 && this.type <= 99)
             {
                 this.brush.Color = Color.DarkRed;
             }
-            else if ((int)type == 3)
+            else if (this.type > 99 && this.type <= 132)
             {
                 this.brush.Color = Color.Blue;
             }
@@ -40,11 +39,11 @@ namespace Projektet
         {
             if ((int)this.type == 1)
             {
-
+                snek.points++;
             }
             else if ((int)type == 2)
             {
-
+                snek.points += 5;
             }
             else if ((int)type == 3)
             {
