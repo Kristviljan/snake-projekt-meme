@@ -48,6 +48,17 @@ namespace Projektet
                 foods.Add(food);
             }
         }
+
+        void Collision(Snake snek1, Snake snek2)
+        {
+            foreach(Rectangle Body in snek2.bodies)
+            {
+                if (snek1.Head.Position.X + 10 >= Body.Position.X)
+                {
+
+                }
+            }
+        }
         private void TimerEventHandler(object sender, EventArgs e)
         {
             AddFood();

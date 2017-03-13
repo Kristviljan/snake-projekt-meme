@@ -9,7 +9,7 @@ namespace Projektet
 {
     public class Snake
     {
-        List<Rectangle> bodies = new List<Rectangle>();
+        public List<Rectangle> bodies = new List<Rectangle>();
         private Rectangle head;
         public int dir = 0;
         private int i;
