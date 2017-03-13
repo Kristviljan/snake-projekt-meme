@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+
 namespace Projektet
 {
     public class Engine
@@ -47,10 +48,11 @@ namespace Projektet
         }
         private void TimerEventHandler(Object obj, EventArgs args)
         {
-
+            form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
+            form.snake.Head.Draw(args.Graphics);
             foreach(var Food in foods)
             {
                 Food.Draw(args.Graphics);

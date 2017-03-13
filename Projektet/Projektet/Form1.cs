@@ -14,7 +14,8 @@ namespace Projektet
     {
         Graphics g;
         SolidBrush brush = new SolidBrush(Color.Black);
-        
+        public Snake snake = new Snake(400, 300);
+
 
         public Form1()
         {
@@ -23,6 +24,7 @@ namespace Projektet
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+
             this.BringToFront();
             this.Focus();
             this.KeyPreview = true;
@@ -47,19 +49,19 @@ namespace Projektet
         {
             if (e.KeyCode == Keys.W)
             {
-                Console.WriteLine("w");
+                snake.Move(1);
             }
             else if (e.KeyCode == Keys.A)
             {
-                Console.WriteLine("a");
+                snake.Move(2);
             }
             else if (e.KeyCode == Keys.S)
             {
-                Console.WriteLine("s");
+                snake.Move(3);
             }
             else if (e.KeyCode == Keys.D)
             {
-                Console.WriteLine("d");
+                snake.Move(4);
             }
         }
 
