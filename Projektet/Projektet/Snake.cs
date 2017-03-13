@@ -22,7 +22,6 @@ namespace Projektet
         {
             Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
             bodies.Add(Body);
-            
         }
         public void Move(int pressed)
         {
