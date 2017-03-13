@@ -41,19 +41,19 @@ namespace Projektet
 
         public void keyeventhandler(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W)
+            if (e.KeyCode == Keys.W && snake.dir != 2)
             {
                 snake.dir = 0;
             }
-            else if (e.KeyCode == Keys.A)
+            else if (e.KeyCode == Keys.A && snake.dir != 3)
             {
                 snake.dir = 1;
             }
-            else if (e.KeyCode == Keys.S)
+            else if (e.KeyCode == Keys.S && snake.dir != 0)
             {
                 snake.dir = 2;
             }
-            else if (e.KeyCode == Keys.D)
+            else if (e.KeyCode == Keys.D && snake.dir != 1)
             {
                 snake.dir = 3;
             }
@@ -72,8 +72,7 @@ namespace Projektet
         {
             foreach(Rectangle Body in snek2.bodies)
             {
-                if (snek1.Head.Position.X + 10 >= Body.Position.X && snek1.Head.Position.X <= Body.Position.X + 10 &&
-                    snek1.Head.Position.Y + 10 >= Body.Position.Y && snek1.Head.Position.Y <= Body.Position.X + 10)
+                if (snek1.Head.Position == Body.Position)
                 {
                     // INSERT LOOSE SHIT HERE
                 }
