@@ -19,21 +19,26 @@ namespace Projektet
         private Timer snakeTimer;
         
 
-        public Snake(int x, int y)
+        public Snake(int x, int y, int z)
         {
             head = new Rectangle(x, y);
+            if (z == 1)
+                head.brush.Color = System.Drawing.Color.Black;
+            else
+                head.brush.Color = System.Drawing.Color.DodgerBlue;
             bodies.Add(head);
             snakeTimer = new Timer();
             snakeTimer.Interval = 1000 / speed;
             snakeTimer.Tick += new EventHandler(Move);
             snakeTimer.Start();
-            //AddBody();
-            //AddBody();
+            AddBody();
+            AddBody();
         }
 
         public void AddBody()
         {
             Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
+            Body.brush.Color = head.brush.Color;
             bodies.Add(Body);
         }
         public void RemoveBody()
