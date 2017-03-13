@@ -59,7 +59,7 @@ namespace Projektet
                 if (snek.Speed <= 10)
                     snek.Speed = 5;
                 else
-                    snek.Speed += 5;
+                    snek.Speed -= 5;
             }
         }
         /*override public void Draw(Graphics g)
