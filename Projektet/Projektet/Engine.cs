@@ -64,7 +64,7 @@ namespace Projektet
         {
             if (foods.Count < 5)
             {
-                var food = new Food(20 * random.Next(2, 30), 20 * random.Next(2, 20), random.Next(0, 132));
+                var food = new Food(20 * random.Next(2, 30), 20 * random.Next(2, 20), random.Next(0, 165));
                 foods.Add(food);
             }
         }
@@ -104,7 +104,7 @@ namespace Projektet
                 if (this.snake.Head.Position == food.Position)
                 {
                     //this.snake.score++;
-                    snake.AddBody();
+                    
                     food.Eat(snake);
                     foods.Remove(food);
                     break;

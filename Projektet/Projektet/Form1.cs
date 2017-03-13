@@ -30,7 +30,7 @@ namespace Projektet
            // g = flowLayoutPanel1.CreateGraphics();
            // g.FillRectangle(brush, 0, 0, 10, 10);
 
-            //flowLayoutPanel1.Invalidate();
+           //flowLayoutPanel1.Invalidate();
         }
 
         private void UpdateScore(object sender, EventArgs e)
@@ -42,24 +42,29 @@ namespace Projektet
         {
 
         }
-        /*public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+
+        private void label2_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.W)
-            {
-                snake.dir = 0;
-            }
-            else if (e.KeyCode == Keys.A)
-            {
-                snake.dir = 1;
-            }
-            else if (e.KeyCode == Keys.S)
-            {
-                snake.dir = 2;
-            }
-            else if (e.KeyCode == Keys.D)
-            {
-                snake.dir = 3;
-            }
-        }*/
+
+        }
+        /*public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+{
+   if (e.KeyCode == Keys.W)
+   {
+       snake.dir = 0;
+   }
+   else if (e.KeyCode == Keys.A)
+   {
+       snake.dir = 1;
+   }
+   else if (e.KeyCode == Keys.S)
+   {
+       snake.dir = 2;
+   }
+   else if (e.KeyCode == Keys.D)
+   {
+       snake.dir = 3;
+   }
+}*/
     }
 }

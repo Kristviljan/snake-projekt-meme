@@ -36,6 +36,11 @@ namespace Projektet
             Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
             bodies.Add(Body);
         }
+        public void RemoveBody()
+        {
+            if (bodies.Count > 3)
+                bodies.Remove(bodies[bodies.Count - 1]);
+        }
         private void Move(object sender, EventArgs e)
         {
             snakeTimer.Interval = 1000 / speed;

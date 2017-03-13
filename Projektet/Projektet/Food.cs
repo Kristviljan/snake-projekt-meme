@@ -34,6 +34,10 @@ namespace Projektet
             {
                 this.brush.Color = Color.Blue;
             }
+            else if (this.type > 132 && this.type <= 165)
+            {
+                this.brush.Color = Color.HotPink;
+            }
         }
         public void Eat(Snake snek)
         {
@@ -41,11 +45,13 @@ namespace Projektet
             {
                 snek.Speed += 1;
                 snek.points++;
+                snek.AddBody();
             }
             else if (this.type > 33 && this.type <= 66)
             {
                 snek.Speed += 1;
                 snek.points += 5;
+                snek.AddBody();
             }
             else if (this.type > 66 && this.type <= 99)
             {
@@ -53,6 +59,7 @@ namespace Projektet
                     snek.Speed = 60;
                 else
                     snek.Speed += 5;
+                snek.AddBody();
             }
             else if (this.type > 99 && this.type <= 132)
             {
@@ -60,6 +67,11 @@ namespace Projektet
                     snek.Speed = 5;
                 else
                     snek.Speed -= 5;
+                snek.AddBody();
+            }
+            else if (this.type > 132 && this.type <= 165)
+            {
+                snek.RemoveBody();
             }
         }
         /*override public void Draw(Graphics g)
