@@ -10,10 +10,12 @@ namespace Projektet
     {
         private Timer timer;
         private Form1 form;
-        
+
+        private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
 
-        public Snake snake = new Snake(400,300);
+        public Snake snake = new Snake(400, 300);
+
 
         private Random random = new Random();
 
@@ -24,10 +26,10 @@ namespace Projektet
         }
         public void Run()
         {
-            
+
             form.Paint += new PaintEventHandler(Draw);
 
-            
+
             timer.Interval = 1000 / 60;
             timer.Tick += new EventHandler(TimerEventHandler);
             timer.Start();
@@ -35,7 +37,7 @@ namespace Projektet
             form.KeyDown += new KeyEventHandler(keyeventhandler);
 
             Application.Run(form);
-            
+
         }
 
         public void keyeventhandler(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -60,36 +62,49 @@ namespace Projektet
 
         public void AddFood()
         {
-            if(foods.Count < 2)
+            if (foods.Count < 2)
             {
-                var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Types.standard);
+                var food = new Food(20 * random.Next(2, 30), 20 * random.Next(2, 20), Food.Types.standard);
                 foods.Add(food);
             }
         }
 
-        void Collision(Snake snek1, Snake snek2)
+        void Collision(Snake snake) // Snake snek2)
         {
-            foreach(Rectangle Body in snek2.bodies)
+            //foreach(Rectangle Body in snek2.bodies)
             {
-                if (snek1.Head.Position == Body.Position)
+               // if (snake.Head.Position == Body.Position)
                 {
                     // INSERT LOOSE SHIT HERE
                 }
                 
-                if (snek2.Head.Position == Body.Position)
+                //if (snek2.Head.Position == Body.Position)
                 {
                     // snek2 collides with itself
                 }
             }
-            foreach(var Body in snek1.bodies)
+            foreach(var Body in snake.bodies)
             {
-                if (snek2.Head.Position == Body.Position)
+                //if (snek2.Head.Position == Body.Position)
                 {
                     // PLAYER 2 HIT PLAYER 1
                 }
-                if (snek1.Head.Position == Body.Position)
+                if (snake.Head.Position == Body.Position)
                 {
                     // snek1 collides with itself
+                }
+            }
+            foreach(var food in foods)
+            {
+                //if (snek2.Head.Position == food.Position)
+                {
+                   // snek2.score++;
+                   // snek2.AddBody();
+                }
+                if (this.snake.Head.Position.X == food.Position.X && this.snake.Head.Position.Y == food.Position.Y)
+                {
+                    this.snake.score++;
+                    this.snake.AddBody();
                 }
             }
         }
@@ -97,8 +112,8 @@ namespace Projektet
         {
             AddFood();
             //form.snake.Move();
-            
             form.Refresh();
+            Collision(snake);
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
