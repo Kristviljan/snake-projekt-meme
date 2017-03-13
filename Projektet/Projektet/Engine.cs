@@ -7,10 +7,19 @@ namespace Projektet
 {
     public class Engine
     {
+        Timer timer;
+        Form1 form;
+
+        private ISet<Snake> snakes = new HashSet<Snake>();
+        private ISet<Food> Foods = new HashSet<Food>();
+
+        private Random random = new Random();
+
         public Engine()
         {
-            Timer timer;
-            Form1 form;
+            form = new Form1();
+            timer = new Timer();
+
         }
         public void Run()
         {
