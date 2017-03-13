@@ -23,8 +23,16 @@ namespace Projektet
         }
         public void Run()
         {
+            form.Paint += new PaintEventHandler(Draw);
+            
 
+            timer.Tick += new EventHandler(TimerEventHandler);
+            timer.Interval = 1000 / 60;
+            timer.Start();
+
+            Application.Run(form);
         }
+
         public void AddFood()
         {
 
