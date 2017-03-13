@@ -50,6 +50,10 @@ namespace Projektet
         {
             Rectangle rect = new Rectangle(1, 1);
             rect.Draw(args.Graphics);
+            foreach(var Food in foods)
+            {
+                Food.Draw(args.Graphics);
+            }
         }
     }
 }
