@@ -10,7 +10,7 @@ namespace Projektet
     public class Rectangle
     {
         public Pen pen = new Pen(Color.Black);
-        public Point point = new Point();
+        private Point point = new Point();
 
         public Rectangle(int x, int y)
         {
@@ -22,7 +22,7 @@ namespace Projektet
         {
             g.DrawRectangle(pen, Point.X, Point.Y, 50, 50);
         }
-        Point Point
+        public Point Point
         {
             get { return point; }
             set { point = value; }

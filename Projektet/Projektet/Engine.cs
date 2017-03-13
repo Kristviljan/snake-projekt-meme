@@ -30,6 +30,7 @@ namespace Projektet
             timer.Interval = 1000 / 60;
             timer.Start();
 
+            
 
             Application.Run(form);
             AddFood();
