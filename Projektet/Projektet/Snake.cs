@@ -12,7 +12,7 @@ namespace Projektet
         private Rectangle head;
         public int dir = 0;
 
-        private int speed = 10;
+        private int speed = 3;
 
         public Snake(int x, int y)
         {

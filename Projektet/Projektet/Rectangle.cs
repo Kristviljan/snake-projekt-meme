@@ -9,7 +9,7 @@ namespace Projektet
 {
     public class Rectangle
     {
-        public Pen pen = new Pen(Color.Black);
+        public SolidBrush brush = new SolidBrush(Color.Black);
         public Point Position = new Point();
 
         public Rectangle(int x, int y)
@@ -20,7 +20,7 @@ namespace Projektet
         // public abstract void Draw(Graphics g);
         public void Draw(Graphics g)
         {
-            g.DrawRectangle(pen, Position.X, Position.Y, 50, 50);
+            g.FillRectangle(brush, Position.X, Position.Y, 10, 10);
         }
     }
 }
