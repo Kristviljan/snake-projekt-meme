@@ -38,7 +38,7 @@ namespace Projektet
         }
         private void Move(object sender, EventArgs e)
         {
-            
+            snakeTimer.Interval = 1000 / speed;
             for(i=bodies.Count - 1; i >= 0; i--)
             {
                 if (i == 0)

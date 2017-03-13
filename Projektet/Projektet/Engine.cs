@@ -104,7 +104,8 @@ namespace Projektet
                 if (this.snake.Head.Position == food.Position)
                 {
                     //this.snake.score++;
-                    this.snake.AddBody();
+                    snake.AddBody();
+                    snake.Speed++;
                     foods.Remove(food);
                     break;
                 }
