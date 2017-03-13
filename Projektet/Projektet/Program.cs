@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace Projektet
 {
-    static class Program
+    class Program
     {
+        Engine engine = new Engine();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
