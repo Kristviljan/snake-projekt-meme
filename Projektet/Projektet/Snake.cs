@@ -12,7 +12,7 @@ namespace Projektet
         private Rectangle head;
         public int dir = 0;
 
-        private int speed;
+        private int speed = 10;
 
         public Snake(int x, int y)
         {
@@ -27,11 +27,11 @@ namespace Projektet
         public void Move()
         {
             if (dir == 0)
-                head.Position.Y += speed;
+                head.Position.Y -= speed;
             if (dir == 1)
                 head.Position.X -= speed;
             if (dir == 2)
-                head.Position.Y -= speed;
+                head.Position.Y += speed;
             if (dir == 3)
                 head.Position.X += speed;
         }

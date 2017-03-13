@@ -25,6 +25,7 @@ namespace Projektet
         }
         public void Run()
         {
+            
             form.Paint += new PaintEventHandler(Draw);
             
             
@@ -36,7 +37,7 @@ namespace Projektet
             
 
             Application.Run(form);
-            AddFood();
+            //AddFood();
         }
 
         public void AddFood()
@@ -48,7 +49,8 @@ namespace Projektet
         }
         private void TimerEventHandler(object sender, EventArgs e)
         {
-
+            form.snake.Move();
+            form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
