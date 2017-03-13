@@ -72,8 +72,7 @@ namespace Projektet
         {
             foreach(Rectangle Body in snek2.bodies)
             {
-                if (snek1.Head.Position.X + 10 >= Body.Position.X && snek1.Head.Position.X <= Body.Position.X + 10 &&
-                    snek1.Head.Position.Y + 10 >= Body.Position.Y && snek1.Head.Position.Y <= Body.Position.X + 10)
+                if (snek1.Head.Position == Body.Position)
                 {
                     // INSERT LOOSE SHIT HERE
                 }
