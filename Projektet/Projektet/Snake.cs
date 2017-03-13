@@ -10,9 +10,9 @@ namespace Projektet
     {
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
-        public void AddBody()
+        public void AddBody(int x, int y)
         {
-            var Body = new Rectangle(50, 50);
+            var Body = new Rectangle(x, y);
             bodies.Add(Body);
         }
         public void Move(int pressed)
