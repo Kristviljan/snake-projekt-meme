@@ -101,10 +101,12 @@ namespace Projektet
                    // snek2.score++;
                    // snek2.AddBody();
                 }
-                if (this.snake.Head.Position.X == food.Position.X && this.snake.Head.Position.Y == food.Position.Y)
+                if (this.snake.Head.Position == food.Position)
                 {
                     //this.snake.score++;
                     this.snake.AddBody();
+                    foods.Remove(food);
+                    break;
                 }
             }
         }
