@@ -8,11 +8,11 @@ namespace Projektet
 {
     class Snake
     {
-        ISet<Snake> bodies = new HashSet<Snake>();
+        ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
         public void AddBody()
         {
-            var Body = new Snake();
+            var Body = new Rectangle(50, 50);
             bodies.Add(Body);
         }
         public void Move(int pressed)

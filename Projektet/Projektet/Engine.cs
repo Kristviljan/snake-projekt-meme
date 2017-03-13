@@ -12,7 +12,6 @@ namespace Projektet
 
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
-        private Head = new Snake.Head();
 
         private Random random = new Random();
 
@@ -29,6 +28,7 @@ namespace Projektet
             timer.Tick += new EventHandler(TimerEventHandler);
             timer.Interval = 1000 / 60;
             timer.Start();
+
 
             Application.Run(form);
         }
@@ -63,7 +63,8 @@ namespace Projektet
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
-
+            Rectangle rect = new Rectangle(1, 1);
+            rect.Draw(args.Graphics);
         }
     }
 }
