@@ -48,8 +48,6 @@ namespace Projektet
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
-            Rectangle rect = new Rectangle(1, 1);
-            rect.Draw(args.Graphics);
             foreach(var Food in foods)
             {
                 Food.Draw(args.Graphics);
