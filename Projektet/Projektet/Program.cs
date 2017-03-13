@@ -6,15 +6,15 @@ using System.Windows.Forms;
 
 namespace Projektet
 {
-    static class Program
+    class Program
     {
+        Engine engine = new Engine();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            Engine engine = new Engine;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
