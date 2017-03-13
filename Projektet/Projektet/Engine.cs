@@ -14,8 +14,8 @@ namespace Projektet
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
 
-        public Snake snake = new Snake(400, 300);
-
+        public Snake snake = new Snake(200, 300);
+        public Snake snek2 = new Snake(600, 300);
 
         private Random random = new Random();
 
@@ -71,11 +71,15 @@ namespace Projektet
 
         void Collision(Snake snake) // Snake snek2)
         {
-            //foreach(Rectangle Body in snek2.bodies)
+            foreach(Rectangle Body in snek2.bodies)
             {
-               // if (snake.Head.Position == Body.Position)
+                if (snek2.Head.Position == Body.Position)
                 {
-                    // INSERT LOOSE SHIT HERE
+                    if (!Body.Equals(snek2.Head) && snek2.bodies.Count > 3)
+                    {
+                        End();
+                        break;
+                    }
                 }
                 
                 //if (snek2.Head.Position == Body.Position)
@@ -85,38 +89,32 @@ namespace Projektet
             }
             foreach(var Body in snake.bodies)
             {
-                //if (snek2.Head.Position == Body.Position)
+                if (snek2.Head.Position == Body.Position)
                 {
-                    // PLAYER 2 HIT PLAYER 1
+                    End();
+                    break;
                 }
                 if (snake.Head.Position == Body.Position)
                 {
                     if (!Body.Equals(snake.Head) && snake.bodies.Count > 3)
                     {
-                        End();// snek1 collides with itself
+                        End(); // snake collides with itself
                         break;
                     }
-                    else
-                    {
-                        
-                    }
-                    
                 }
             }
             foreach(var food in foods)
             {
-                //if (snek2.Head.Position == food.Position)
+                if (snek2.Head.Position == food.Position)
                 {
-                   // snek2.score++;
-                   // snek2.AddBody();
+                    food.Eat(snek2);
+                    foods.Remove(food);
+                    break;
                 }
                 if (this.snake.Head.Position == food.Position)
                 {
-                    //this.snake.score++;
-                    
                     food.Eat(snake);
                     foods.Remove(food);
-                    //End();
                     break;
                 }
             }
@@ -134,6 +132,10 @@ namespace Projektet
             foreach(var Body in snake.bodies)
             {
                 Body.Draw(args.Graphics);
+            }
+            foreach(var Body in snek2.bodies)
+            {
+                Body.Draw(args.Graphics)
             }
             //Food fod = new Food(50,50,Food.Type.standard );
             //fod.Draw(args.Graphics);
