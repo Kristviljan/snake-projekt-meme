@@ -28,25 +28,4 @@ namespace Projektet
             set { point = value; }
         }
     }
-
-    public class BodyRectangle : Rectangle
-    {
-        public enum Direction
-        {
-            right,
-            left,
-            up,
-            down
-        };
-
-        Direction direction;
-
-        public BodyRectangle(int x, int y, Direction direction) : base(x, y) { this.direction = direction; }
-
-        public Direction MoveDirection
-        {
-            get { return direction; }
-            set { direction = value; }
-        }
-    }
 }
