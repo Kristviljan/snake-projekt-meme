@@ -39,26 +39,27 @@ namespace Projektet
         {
             if (this.type >= 0 && this.type <= 33)
             {
+                snek.Speed += 1;
                 snek.points++;
             }
             else if (this.type > 33 && this.type <= 66)
             {
+                snek.Speed += 1;
                 snek.points += 5;
             }
             else if (this.type > 66 && this.type <= 99)
             {
-                snek.Speed += 5;
+                if (snek.Speed >= 55)
+                    snek.Speed = 60;
+                else
+                    snek.Speed += 5;
             }
             else if (this.type > 99 && this.type <= 132)
             {
                 if (snek.Speed <= 10)
-                {
                     snek.Speed = 5;
-                }
                 else
-                {
                     snek.Speed -= 5;
-                }
             }
         }
         /*override public void Draw(Graphics g)
