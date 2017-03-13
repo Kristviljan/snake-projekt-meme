@@ -21,7 +21,7 @@ namespace Projektet
         // public abstract void Draw(Graphics g);
         public void Draw(Graphics g)
         {
-            g.FillRectangle(brush, (Position.X % 800) + 12 , (Position.Y % 600) + 12, 10, 10);
+            g.FillRectangle(brush, Position.X + 12 , Position.Y + 12, 10, 10);
         }
     }
 }
