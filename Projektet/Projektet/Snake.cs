@@ -14,7 +14,7 @@ namespace Projektet
         public int dir = 0;
         private int i;
         private int speed = 5;
-        public int score = 0;
+        public int points = 0;
 
         private Timer snakeTimer;
         
@@ -38,6 +38,7 @@ namespace Projektet
         }
         private void Move(object sender, EventArgs e)
         {
+            
             for(i=bodies.Count - 1; i >= 0; i--)
             {
                 if (i == 0)
