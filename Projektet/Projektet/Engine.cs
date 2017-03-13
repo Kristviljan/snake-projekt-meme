@@ -15,8 +15,8 @@ namespace Projektet
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
 
-        public Snake snake = new Snake(400, 300);
-        public Snake snake2 = new Snake(300, 400);
+        public Snake snake = new Snake(400, 300, 1);
+        public Snake snake2 = new Snake(300, 400, 2);
 
 
         private Random random = new Random();
