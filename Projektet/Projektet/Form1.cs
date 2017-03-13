@@ -49,19 +49,19 @@ namespace Projektet
         {
             if (e.KeyCode == Keys.W)
             {
-                snake.Move(1);
+                snake.dir = 0;
             }
             else if (e.KeyCode == Keys.A)
             {
-                snake.Move(2);
+                snake.dir = 1;
             }
             else if (e.KeyCode == Keys.S)
             {
-                snake.Move(3);
+                snake.dir = 2;
             }
             else if (e.KeyCode == Keys.D)
             {
-                snake.Move(4);
+                snake.dir = 3;
             }
         }
     }

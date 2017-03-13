@@ -10,6 +10,7 @@ namespace Projektet
     {
         List<Rectangle> bodies = new List<Rectangle>();
         private Rectangle head;
+        public int dir = 0;
 
         private int speed;
 
@@ -23,10 +24,16 @@ namespace Projektet
             Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
             bodies.Add(Body);
         }
-        public void Move(int pressed)
+        public void Move()
         {
-            head.Position.X = 1;
-            
+            if (dir == 0)
+                head.Position.Y += speed;
+            if (dir == 1)
+                head.Position.X -= speed;
+            if (dir == 2)
+                head.Position.Y -= speed;
+            if (dir == 3)
+                head.Position.X += speed;
         }
         public Rectangle Head
         {
