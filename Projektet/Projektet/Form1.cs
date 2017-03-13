@@ -24,7 +24,6 @@ namespace Projektet
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
 
-            
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -54,6 +53,11 @@ namespace Projektet
             {
                 Console.WriteLine("d");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
