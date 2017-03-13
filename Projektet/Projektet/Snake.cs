@@ -10,7 +10,7 @@ namespace Projektet
     {
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
-        private Rectangle Head = new Rectangle(400,300);
+        private Rectangle head = new Rectangle(400, 300);
 
         public void AddBody(int x, int y)
         {
@@ -23,7 +23,7 @@ namespace Projektet
         }
         public Rectangle Head
         {
-            get { return Head; }
+            get { return head; }
         }
         private int speed;
         public int Speed
@@ -31,4 +31,5 @@ namespace Projektet
             get { return speed; }
             set { speed = value; }
         }
+    }
 }
