@@ -32,32 +32,16 @@ namespace Projektet
 
 
             Application.Run(form);
+            AddFood();
         }
 
         public void AddFood()
         {
-            
+            if(foods.Count < 2)
+            {
+                var Food = new Food(random.Next(50, 410), random.Next(50, 310));
+            }
         }
-        /*public void Form1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            
-            if(e.KeyCode == Keys.W)
-            {
-                
-            }
-            else if (e.KeyCode == Keys.A)
-            {
-
-            }
-            else if (e.KeyCode == Keys.S)
-            {
-
-            }
-            else if (e.KeyCode == Keys.D)
-            {
-
-            }
-        }*/
         private void TimerEventHandler(Object obj, EventArgs args)
         {
 

@@ -14,16 +14,15 @@ namespace Projektet
     {
         public Form1()
         {
-            Text = "SNAKE";
-            Width = 800;
-            Height = 600;
-            DoubleBuffered = true;
             InitializeComponent();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            this.BringToFront();
+            this.Focus();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -33,16 +32,25 @@ namespace Projektet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BringToFront();
-            this.Focus();
-            this.KeyPreview = true;
-            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+
         }
-        public void Form1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W)
             {
-                Console.WriteLine("lol");
+                Console.WriteLine("w");
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                Console.WriteLine("a");
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                Console.WriteLine("s");
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                Console.WriteLine("d");
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektet
 {
-    class Snake
+    public class Snake
     {
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
