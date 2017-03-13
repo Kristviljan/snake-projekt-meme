@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Projektet
 {
-    class Rectangle
+    public class Rectangle
     {
         private Pen pen = new Pen(Color.Black);
         private Point point = new Point();

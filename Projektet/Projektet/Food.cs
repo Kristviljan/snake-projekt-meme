@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Projektet
 {
-    class Food
+    public class Food : Rectangle
     {
+        public enum Type { standard, bonus, speed }
+
+        public Food (int x, int y, Type type) : base(x,y)
+        {
+
+        }
     }
 }
