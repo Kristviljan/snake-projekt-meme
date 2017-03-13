@@ -26,7 +26,7 @@ namespace Projektet
         }
         public void Move(int pressed)
         {
-
+            this.Head.Position.X = 1
         }
         public Rectangle Head
         {
