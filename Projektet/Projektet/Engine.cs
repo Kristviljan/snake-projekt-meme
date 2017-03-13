@@ -11,7 +11,7 @@ namespace Projektet
         private Form1 form;
 
         private ISet<Snake> snakes = new HashSet<Snake>();
-        private ISet<Food> Foods = new HashSet<Food>();
+        private ISet<Food> foods = new HashSet<Food>();
 
         private Random random = new Random();
 
@@ -19,7 +19,6 @@ namespace Projektet
         {
             form = new Form1();
             timer = new Timer();
-
         }
         public void Run()
         {
