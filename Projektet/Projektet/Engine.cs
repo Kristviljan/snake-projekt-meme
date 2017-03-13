@@ -38,7 +38,7 @@ namespace Projektet
         {
             
         }
-        public void Form1_keydown(object sender, System.Windows.Forms.KeyEventArgs e)
+        /*public void Form1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             
             if(e.KeyCode == Keys.W)
@@ -57,7 +57,7 @@ namespace Projektet
             {
 
             }
-        }
+        }*/
         private void TimerEventHandler(Object obj, EventArgs args)
         {
 
