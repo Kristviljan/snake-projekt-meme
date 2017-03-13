@@ -44,7 +44,7 @@ namespace Projektet
         {
             if(foods.Count < 2)
             {
-                var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Type.standard);
+                var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Types.standard);
                 foods.Add(food);
             }
         }
@@ -53,9 +53,10 @@ namespace Projektet
         {
             foreach(Rectangle Body in snek2.bodies)
             {
-                if (snek1.Head.Position.X + 10 >= Body.Position.X)
+                if (snek1.Head.Position.X + 10 >= Body.Position.X && snek1.Head.Position.X <= Body.Position.X + 10 &&
+                    snek1.Head.Position.Y + 10 >= Body.Position.Y && snek1.Head.Position.Y <= Body.Position.X + 10)
                 {
-
+                    // INSERT LOOSE SHIT HERE
                 }
             }
         }
@@ -67,7 +68,11 @@ namespace Projektet
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
-            form.snake.Head.Draw(args.Graphics);
+            //form.snake.Head.Draw(args.Graphics);
+            foreach(var Body in snake.bodies)
+            {
+                Body.Draw(args.Graphics);
+            }
             //Food fod = new Food(50,50,Food.Type.standard );
             //fod.Draw(args.Graphics);
             foreach(var food in foods)
