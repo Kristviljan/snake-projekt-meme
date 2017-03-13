@@ -91,7 +91,16 @@ namespace Projektet
                 }
                 if (snake.Head.Position == Body.Position)
                 {
-                    // snek1 collides with itself
+                    if (Body.Equals(snake.Head))
+                    {
+
+                    }
+                    else
+                    {
+                        End();// snek1 collides with itself
+                        break;
+                    }
+                    
                 }
             }
             foreach(var food in foods)
@@ -107,7 +116,7 @@ namespace Projektet
                     
                     food.Eat(snake);
                     foods.Remove(food);
-                    End();
+                    //End();
                     break;
                 }
             }
