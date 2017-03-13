@@ -20,7 +20,7 @@ namespace Projektet
 
         public void Draw(Graphics g)
         {
-            g.DrawRectangle(pen, 50, 50, 50, 50);
+            g.DrawRectangle(pen, Point.X, Point.Y, 50, 50);
         }
         Point Point
         {

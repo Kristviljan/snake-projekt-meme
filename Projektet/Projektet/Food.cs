@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektet
 {
-    class Orm
+    class Food
     {
     }
 }

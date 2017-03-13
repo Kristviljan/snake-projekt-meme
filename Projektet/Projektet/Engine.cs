@@ -7,33 +7,32 @@ namespace Projektet
 {
     public class Engine
     {
-        private Timer timer;
-        private Form1 form;
+        Timer timer;
+        Form1 form;
 
+        private ISet<Snake> snakes = new HashSet<Snake>();
+        private ISet<Food> Foods = new HashSet<Food>();
+
+        private Random random = new Random();
 
         public Engine()
         {
-            timer = new Timer();
             form = new Form1();
-
+            timer = new Timer();
 
         }
-
         public void Run()
         {
 
         }
-
         public void AddFood()
         {
 
         }
-
         private void TimerEventHandler(Object obj, EventArgs args)
         {
 
         }
-
         private void Draw(Object obj, PaintEventArgs args)
         {
 
