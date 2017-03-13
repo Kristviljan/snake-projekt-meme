@@ -10,6 +10,8 @@ namespace Projektet
     {
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
+        private Rectangle Head = new Rectangle(400,300);
+
         public void AddBody(int x, int y)
         {
             var Body = new Rectangle(x, y);
@@ -18,6 +20,10 @@ namespace Projektet
         public void Move(int pressed)
         {
 
+        }
+        public Rectangle Head
+        {
+            get { return Head; }
         }
     }
 }
