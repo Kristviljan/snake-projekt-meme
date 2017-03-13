@@ -20,9 +20,9 @@ namespace Projektet
         // public abstract void Draw(Graphics g);
         public void Draw(Graphics g)
         {
-            g.DrawRectangle(pen, Point.X, Point.Y, 50, 50);
+            g.DrawRectangle(pen, Position.X, Position.Y, 50, 50);
         }
-        public Point Point
+        public Point Position
         {
             get { return point; }
             set { point = value; }
