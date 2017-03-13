@@ -20,9 +20,8 @@ namespace Projektet
 
         public void AddBody()
         {
-            Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Point.X, bodies[bodies.Count - 1].Point.Y);
+            Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
             bodies.Add(Body);
-            
         }
         public void Move(int pressed)
         {
