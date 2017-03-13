@@ -9,10 +9,10 @@ namespace Projektet
     public class Snake
     {
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
-
+        private Rectangle head;
         public Snake(int x, int y)
         {
-            private Rectangle head = new Rectangle(x, y);
+            head = new Rectangle(x, y);
         }
 
         public void AddBody(int x, int y)
