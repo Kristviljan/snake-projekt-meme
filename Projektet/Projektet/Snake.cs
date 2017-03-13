@@ -51,16 +51,28 @@ namespace Projektet
                     switch (dir)
                     {
                         case 0:
-                            bodies[i].Position.Y = bodies[i].Position.Y - 10;
+                            if (bodies[i].Position.Y - 10 < -10)
+                                bodies[i].Position.Y = 600;
+                            else
+                                bodies[i].Position.Y = bodies[i].Position.Y - 10;
                             break;
                         case 1:
-                            bodies[i].Position.X = bodies[i].Position.X - 10;
+                            if (bodies[i].Position.X - 10 < -10)
+                                bodies[i].Position.X = 800;
+                            else
+                                bodies[i].Position.X = bodies[i].Position.X - 10;
                             break;
                         case 2:
-                            bodies[i].Position.Y = bodies[i].Position.Y + 10;
+                            if (bodies[i].Position.Y + 10 > 600)
+                                bodies[i].Position.Y = -10;
+                            else
+                                bodies[i].Position.Y = bodies[i].Position.Y + 10;
                             break;
                         case 3:
-                            bodies[i].Position.X = bodies[i].Position.X + 10;
+                            if (bodies[i].Position.X + 10 > 800)
+                                bodies[i].Position.X = -10;
+                            else
+                                bodies[i].Position.X = bodies[i].Position.X + 10;
                             break;
                     }
                 }
