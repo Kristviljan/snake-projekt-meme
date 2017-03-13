@@ -29,7 +29,7 @@ namespace Projektet
             this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
 
             g = flowLayoutPanel1.CreateGraphics();
-            g.FillRectangle(brush, 3, 3, 40, 40);
+            g.FillRectangle(brush, 0, 0, 20, 20);
 
             
         }
