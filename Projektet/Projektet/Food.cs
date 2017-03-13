@@ -51,7 +51,14 @@ namespace Projektet
             }
             else if (this.type > 99 && this.type <= 132)
             {
+                if (snek.Speed <= 10)
+                {
+                    snek.Speed = 5;
+                }
+                else
+                {
                 snek.Speed -= 5;
+                }
             }
         }
         /*override public void Draw(Graphics g)
