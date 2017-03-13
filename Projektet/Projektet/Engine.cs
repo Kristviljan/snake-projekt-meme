@@ -7,8 +7,8 @@ namespace Projektet
 {
     public class Engine
     {
-        Timer timer;
-        Form1 form;
+        private Timer timer;
+        private Form1 form;
 
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> Foods = new HashSet<Food>();
