@@ -13,13 +13,15 @@ namespace Projektet
     public partial class Form1 : Form
     {
 
-
         public Form1()
         {
+            
+
             this.BringToFront();
             this.Focus();
             this.KeyPreview = true;
             InitializeComponent();
+
         }
 
         private void Update(object sender, System.EventArgs e)
@@ -47,24 +49,34 @@ namespace Projektet
         {
 
         }
+
+        private void label6_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        public void Scores(Object sender, PaintEventArgs e, int score)
+        {
+            label6.Text = score.ToString();
+            label7.Text = score.ToString();
+        }
         /*public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
 {
-   if (e.KeyCode == Keys.W)
-   {
-       snake.dir = 0;
-   }
-   else if (e.KeyCode == Keys.A)
-   {
-       snake.dir = 1;
-   }
-   else if (e.KeyCode == Keys.S)
-   {
-       snake.dir = 2;
-   }
-   else if (e.KeyCode == Keys.D)
-   {
-       snake.dir = 3;
-   }
+if (e.KeyCode == Keys.W)
+{
+snake.dir = 0;
+}
+else if (e.KeyCode == Keys.A)
+{
+snake.dir = 1;
+}
+else if (e.KeyCode == Keys.S)
+{
+snake.dir = 2;
+}
+else if (e.KeyCode == Keys.D)
+{
+snake.dir = 3;
+}
 }*/
     }
 }

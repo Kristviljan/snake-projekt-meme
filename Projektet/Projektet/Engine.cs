@@ -10,6 +10,7 @@ namespace Projektet
     {
         private Timer timer;
         private Form1 form;
+        
 
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
@@ -125,13 +126,19 @@ namespace Projektet
         {
             AddFood();
             //form.snake.Move();
+            
             form.Refresh();
             Collision(snake);
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
             //form.snake.Head.Draw(args.Graphics);
-            foreach(var Body in snake.bodies)
+
+
+            form.Scores(obj, args, snake.points);
+
+
+            foreach (var Body in snake.bodies)
             {
                 Body.Draw(args.Graphics);
             }
