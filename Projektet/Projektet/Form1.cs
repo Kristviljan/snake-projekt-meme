@@ -33,7 +33,17 @@ namespace Projektet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.BringToFront();
+            this.Focus();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+        }
+        public void Form1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.W)
+            {
+                Console.WriteLine("lol");
+            }
         }
     }
 }
