@@ -57,7 +57,7 @@ namespace Projektet
                 }
                 else
                 {
-                snek.Speed -= 5;
+                    snek.Speed -= 5;
                 }
             }
         }
