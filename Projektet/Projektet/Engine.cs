@@ -93,9 +93,9 @@ namespace Projektet
 
         void Collision(Snake snake, Snake snake2) // Snake snek2)
         {
-            foreach(var Body in snake.bodies)
+            foreach(var Body in snake2.bodies)
             {
-                if (snake2.Head.Position == Body.Position)
+                if (snake.Head.Position == Body.Position)
                 {
                     End();
                     break;
@@ -164,7 +164,7 @@ namespace Projektet
             //form.snake.Head.Draw(args.Graphics);
 
 
-            form.Scores(obj, args, snake.points);
+            form.Scores(obj, args, snake.points, snake2.points);
 
 
             foreach (var Body in snake.bodies)
