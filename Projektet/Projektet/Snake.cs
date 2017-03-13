@@ -22,11 +22,10 @@ namespace Projektet
         {
             Rectangle Body = new Rectangle(bodies[bodies.Count - 1].Position.X, bodies[bodies.Count - 1].Position.Y);
             bodies.Add(Body);
-            
         }
         public void Move(int pressed)
         {
-
+            this.Head.Position.X = 1
         }
         public Rectangle Head
         {
