@@ -39,7 +39,7 @@ namespace Projektet
         {
             if(foods.Count < 2)
             {
-                var food = new Food(random.Next(50, 410), random.Next(50, 310), Food.Type.standard);
+                var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Type.standard);
             }
         }
         private void TimerEventHandler(Object obj, EventArgs args)
