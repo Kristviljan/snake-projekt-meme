@@ -8,5 +8,16 @@ namespace Projektet
 {
     class Snake
     {
+        ISet<Snake> bodies = new HashSet<Snake>();
+
+        public void AddBody()
+        {
+            var Body = new Snake();
+            bodies.Add(Body);
+        }
+        public void Move(int pressed)
+        {
+
+        }
     }
 }

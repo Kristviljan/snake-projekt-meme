@@ -12,6 +12,7 @@ namespace Projektet
 
         private ISet<Snake> snakes = new HashSet<Snake>();
         private ISet<Food> foods = new HashSet<Food>();
+        private Head = new Snake.Head();
 
         private Random random = new Random();
 
@@ -27,6 +28,26 @@ namespace Projektet
         public void AddFood()
         {
 
+        }
+        public void Form1_keydown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            
+            if(e.KeyCode == Keys.W)
+            {
+                
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+
+            }
         }
         private void TimerEventHandler(Object obj, EventArgs args)
         {
