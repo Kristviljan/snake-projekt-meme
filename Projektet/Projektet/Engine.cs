@@ -34,10 +34,30 @@ namespace Projektet
             timer.Tick += new EventHandler(TimerEventHandler);
             timer.Start();
 
-            
+            form.KeyDown += new KeyEventHandler(keyeventhandler);
 
             Application.Run(form);
             
+        }
+
+        public void keyeventhandler(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.W)
+            {
+                snake.dir = 0;
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                snake.dir = 1;
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                snake.dir = 2;
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                snake.dir = 3;
+            }
         }
 
         public void AddFood()
