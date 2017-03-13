@@ -62,7 +62,7 @@ namespace Projektet
 
         public void AddFood()
         {
-            if (foods.Count < 2)
+            if (foods.Count < 5)
             {
                 var food = new Food(20 * random.Next(2, 30), 20 * random.Next(2, 20), random.Next(0, 132));
                 foods.Add(food);
