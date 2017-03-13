@@ -11,6 +11,7 @@ namespace Projektet
     {
         public SolidBrush brush = new SolidBrush(Color.Black);
         public Point Position = new Point();
+        
 
         public Rectangle(int x, int y)
         {

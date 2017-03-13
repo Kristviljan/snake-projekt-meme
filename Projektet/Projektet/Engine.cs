@@ -76,6 +76,22 @@ namespace Projektet
                 {
                     // INSERT LOOSE SHIT HERE
                 }
+                
+                if (snek2.Head.Position == Body.Position)
+                {
+                    // snek2 collides with itself
+                }
+            }
+            foreach(var Body in snek1.bodies)
+            {
+                if (snek2.Head.Position == Body.Position)
+                {
+                    // PLAYER 2 HIT PLAYER 1
+                }
+                if (snek1.Head.Position == Body.Position)
+                {
+                    // snek1 collides with itself
+                }
             }
         }
         private void TimerEventHandler(object sender, EventArgs e)
