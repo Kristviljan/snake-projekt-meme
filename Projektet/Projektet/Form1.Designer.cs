@@ -68,9 +68,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 70);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "SCORE P1";
             this.label6.Paint += new System.Windows.Forms.PaintEventHandler(this.label6_Paint);
@@ -81,18 +82,20 @@
             this.label5.BackColor = System.Drawing.Color.HotPink;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(313, 11);
+            this.label5.Location = new System.Drawing.Point(369, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 15);
+            this.label5.Size = new System.Drawing.Size(103, 15);
             this.label5.TabIndex = 4;
-            this.label5.Text = "length -1";
+            this.label5.Text = "length - 1, score + 1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(761, 70);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(755, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "label7";
             // 
@@ -104,9 +107,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(192, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 15);
+            this.label4.Size = new System.Drawing.Size(156, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "speed - 5, length + 1";
+            this.label4.Text = "speed - 5, length + 1, score + 1";
             // 
             // label3
             // 
@@ -116,9 +119,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(192, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.Size = new System.Drawing.Size(165, 15);
             this.label3.TabIndex = 2;
-            this.label3.Text = "speed + 10, length + 1";
+            this.label3.Text = "speed + 10, length + 1, score + 1";
             // 
             // label2
             // 
@@ -127,9 +130,9 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Location = new System.Drawing.Point(14, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 15);
+            this.label2.Size = new System.Drawing.Size(162, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "speed + 1,  points + 5,  length + 1";
+            this.label2.Text = "speed + 1,  length + 1, score + 5";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -139,9 +142,10 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 15);
+            this.label1.Size = new System.Drawing.Size(109, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Length + 1,  score + 1";
+            this.label1.Text = "length + 1,  score + 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 

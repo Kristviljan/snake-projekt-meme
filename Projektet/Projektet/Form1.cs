@@ -59,6 +59,11 @@ namespace Projektet
             label6.Text = score1.ToString();
             label7.Text = score2.ToString();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         /*public void flowLayoutPanel1_Paint_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
 {
 if (e.KeyCode == Keys.W)

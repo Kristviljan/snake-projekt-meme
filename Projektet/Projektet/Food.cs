@@ -60,6 +60,7 @@ namespace Projektet
                 else
                     snek.Speed += 5;
                 snek.AddBody();
+                snek.points++;
             }
             else if (this.type > 99 && this.type <= 132)
             {
@@ -68,10 +69,12 @@ namespace Projektet
                 else
                     snek.Speed -= 5;
                 snek.AddBody();
+                snek.points++;
             }
             else if (this.type > 132 && this.type <= 165)
             {
                 snek.RemoveBody();
+                snek.points++;
             }
         }
         /*override public void Draw(Graphics g)
