@@ -8,7 +8,8 @@ namespace Projektet
 {
     public class Snake
     {
-        ISet<Rectangle> bodies = new HashSet<Rectangle>();
+        //ISet<Rectangle> bodies = new HashSet<Rectangle>();
+        List<Rectangle> bodies = new List<Rectangle>();
         private Rectangle head;
         public Snake(int x, int y)
         {
