@@ -34,7 +34,7 @@ namespace Projektet
 
         public void AddFood()
         {
-
+            
         }
         private void TimerEventHandler(Object obj, EventArgs args)
         {
