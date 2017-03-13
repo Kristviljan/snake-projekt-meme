@@ -37,7 +37,7 @@ namespace Projektet
             
 
             Application.Run(form);
-            //AddFood();
+            
         }
 
         public void AddFood()
@@ -45,19 +45,23 @@ namespace Projektet
             if(foods.Count < 2)
             {
                 var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Type.standard);
+                foods.Add(food);
             }
         }
         private void TimerEventHandler(object sender, EventArgs e)
         {
+            AddFood();
             form.snake.Move();
             form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
             form.snake.Head.Draw(args.Graphics);
-            foreach(var Food in foods)
+            Food fod = new Food(50,50,Food.Type.standard );
+          //  fod.Draw(args.Graphics);
+            foreach(var food in foods)
             {
-                Food.Draw(args.Graphics);
+                food.Draw(args.Graphics);
             }
         }
     }
