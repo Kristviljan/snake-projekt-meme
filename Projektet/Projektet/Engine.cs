@@ -16,6 +16,7 @@ namespace Projektet
         private ISet<Food> foods = new HashSet<Food>();
 
         public Snake snake = new Snake(400, 300);
+        public Snake snake2 = new Snake(300, 400);
 
 
         private Random random = new Random();
@@ -35,13 +36,14 @@ namespace Projektet
             timer.Tick += new EventHandler(TimerEventHandler);
             timer.Start();
 
-            form.KeyDown += new KeyEventHandler(keyeventhandler);
+            form.KeyDown += new KeyEventHandler(Player1Handler);
+            form.KeyDown += new KeyEventHandler(Player2Handler);
 
             Application.Run(form);
 
         }
 
-        public void keyeventhandler(object sender, System.Windows.Forms.KeyEventArgs e)
+        public void Player1Handler(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W && snake.dir != 2)
             {
@@ -60,6 +62,25 @@ namespace Projektet
                 snake.dir = 3;
             }
         }
+        public void Player2Handler(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up && snake2.dir != 2)
+            {
+                snake2.dir = 0;
+            }
+            else if (e.KeyCode == Keys.Left && snake2.dir != 3)
+            {
+                snake2.dir = 1;
+            }
+            else if (e.KeyCode == Keys.Down && snake2.dir != 0)
+            {
+                snake2.dir = 2;
+            }
+            else if (e.KeyCode == Keys.Right && snake2.dir != 1)
+            {
+                snake2.dir = 3;
+            }
+        }
 
         public void AddFood()
         {
@@ -70,46 +91,54 @@ namespace Projektet
             }
         }
 
-        void Collision(Snake snake) // Snake snek2)
+        void Collision(Snake snake, Snake snake2) // Snake snek2)
         {
-            //foreach(Rectangle Body in snek2.bodies)
+            foreach(var Body in snake.bodies)
             {
-               // if (snake.Head.Position == Body.Position)
+                if (snake2.Head.Position == Body.Position)
                 {
-                    // INSERT LOOSE SHIT HERE
+                    End();
+                    break;
+                    //INSERT LOOSE SHIT HERE
                 }
                 
-                //if (snek2.Head.Position == Body.Position)
+                if (snake2.Head.Position == Body.Position)
                 {
-                    // snek2 collides with itself
+                    if (snake2.Head.Position == Body.Position)
+                    {
+                        if (!Body.Equals(snake2.Head) && snake2.bodies.Count > 3)
+                        {
+                            End();// snek2 collides with itself
+                            break;
+                        }
+                    }// snek2 collides with itself
                 }
             }
             foreach(var Body in snake.bodies)
             {
-                //if (snek2.Head.Position == Body.Position)
+                if (snake2.Head.Position == Body.Position)
                 {
+                    End();
+                    break;
                     // PLAYER 2 HIT PLAYER 1
                 }
                 if (snake.Head.Position == Body.Position)
                 {
-                    if (Body.Equals(snake.Head) && snake.bodies.Count < 3)
-                    {
-
-                    }
-                    else
+                    if (!Body.Equals(snake.Head) && snake.bodies.Count > 3)
                     {
                         End();// snek1 collides with itself
                         break;
                     }
-                    
                 }
             }
             foreach(var food in foods)
             {
-                //if (snek2.Head.Position == food.Position)
+                if (snake2.Head.Position == food.Position)
                 {
-                   // snek2.score++;
-                   // snek2.AddBody();
+                    food.Eat(snake2);
+                    foods.Remove(food);
+                    //End();
+                    break;
                 }
                 if (this.snake.Head.Position == food.Position)
                 {
@@ -128,7 +157,7 @@ namespace Projektet
             //form.snake.Move();
             
             form.Refresh();
-            Collision(snake);
+            Collision(snake,snake2);
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
@@ -142,9 +171,13 @@ namespace Projektet
             {
                 Body.Draw(args.Graphics);
             }
+            foreach (var Body in snake2.bodies)
+            {
+                Body.Draw(args.Graphics);
+            }
             //Food fod = new Food(50,50,Food.Type.standard );
             //fod.Draw(args.Graphics);
-            foreach(var food in foods)
+            foreach (var food in foods)
             {
                 food.Draw(args.Graphics);
             }
