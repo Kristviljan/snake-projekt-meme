@@ -22,7 +22,7 @@ namespace Projektet
             InitializeComponent();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Update(object sender, PaintEventArgs e)
         {
 
             this.BringToFront();
@@ -33,10 +33,10 @@ namespace Projektet
             g = flowLayoutPanel1.CreateGraphics();
             g.FillRectangle(brush, 0, 0, 20, 20);
 
-            
+            flowLayoutPanel1.Invalidate();
         }
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void UpdateScore(object sender, PaintEventArgs e)
         {
 
         }
@@ -63,11 +63,6 @@ namespace Projektet
             {
                 snake.Move(4);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

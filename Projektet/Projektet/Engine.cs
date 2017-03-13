@@ -28,9 +28,9 @@ namespace Projektet
             form.Paint += new PaintEventHandler(Draw);
             
             
-
-            timer.Tick += new EventHandler(TimerEventHandler);
+            
             timer.Interval = 1000 / 60;
+            timer.Tick += new EventHandler(form.Update);
             timer.Start();
 
             
@@ -45,10 +45,6 @@ namespace Projektet
             {
                 var food = new Food(20*random.Next(2, 30), 20*random.Next(2, 20), Food.Type.standard);
             }
-        }
-        private void TimerEventHandler(Object obj, EventArgs args)
-        {
-            form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
         {
