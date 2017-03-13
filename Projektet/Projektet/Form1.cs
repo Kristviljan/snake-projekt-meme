@@ -23,7 +23,7 @@ namespace Projektet
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
