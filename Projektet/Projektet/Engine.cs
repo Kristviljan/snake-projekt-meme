@@ -135,7 +135,7 @@ namespace Projektet
             }
             foreach(var Body in snek2.bodies)
             {
-                Body.Draw(args.Graphics)
+                Body.Draw(args.Graphics);
             }
             //Food fod = new Food(50,50,Food.Type.standard );
             //fod.Draw(args.Graphics);
