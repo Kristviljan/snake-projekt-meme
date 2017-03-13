@@ -91,14 +91,14 @@ namespace Projektet
                 }
                 if (snake.Head.Position == Body.Position)
                 {
-                    if (Body.Equals(snake.Head) && snake.bodies.Count < 3)
-                    {
-
-                    }
-                    else
+                    if (!Body.Equals(snake.Head) && snake.bodies.Count > 3)
                     {
                         End();// snek1 collides with itself
                         break;
+                    }
+                    else
+                    {
+                        
                     }
                     
                 }
