@@ -11,6 +11,7 @@ namespace Projektet
         ISet<Rectangle> bodies = new HashSet<Rectangle>();
 
         private Rectangle head = new Rectangle(400, 300);
+        private int speed;
 
         public void AddBody(int x, int y)
         {
@@ -25,7 +26,7 @@ namespace Projektet
         {
             get { return head; }
         }
-        private int speed;
+
         public int Speed
         {
             get { return speed; }
