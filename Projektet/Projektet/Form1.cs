@@ -61,5 +61,10 @@ namespace Projektet
                 Console.WriteLine("d");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
