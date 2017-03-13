@@ -91,7 +91,7 @@ namespace Projektet
                 }
                 if (snake.Head.Position == Body.Position)
                 {
-                    if (Body.Equals(snake.Head))
+                    if (Body.Equals(snake.Head) && snake.bodies.Count < 3)
                     {
 
                     }
