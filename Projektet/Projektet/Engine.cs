@@ -51,7 +51,7 @@ namespace Projektet
         private void TimerEventHandler(object sender, EventArgs e)
         {
             AddFood();
-            form.snake.Move();
+            //form.snake.Move();
             form.Refresh();
         }
         private void Draw(Object obj, PaintEventArgs args)
