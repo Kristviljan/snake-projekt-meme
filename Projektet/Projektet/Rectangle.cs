@@ -17,7 +17,7 @@ namespace Projektet
             this.point.X = x;
             this.point.Y = y;
         }
-       // public abstract void Draw(Graphics g);
+        // public abstract void Draw(Graphics g);
         public void Draw(Graphics g)
         {
             g.DrawRectangle(pen, Point.X, Point.Y, 50, 50);
@@ -26,6 +26,27 @@ namespace Projektet
         {
             get { return point; }
             set { point = value; }
+        }
+    }
+
+    public class BodyRectangle : Rectangle
+    {
+        public enum Direction
+        {
+            right,
+            left,
+            up,
+            down
+        };
+
+        Direction direction;
+
+        public BodyRectangle(int x, int y, Direction direction) : base(x, y) { this.direction = direction; }
+
+        public Direction MoveDirection
+        {
+            get { return direction; }
+            set { direction = value; }
         }
     }
 }
