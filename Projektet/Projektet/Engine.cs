@@ -92,10 +92,12 @@ namespace Projektet
 
         void Collision(Snake snake, Snake snake2) // Snake snek2)
         {
-            foreach(var Body in snake2.bodies)
+            foreach(var Body in snake.bodies)
             {
                 if (snake2.Head.Position == Body.Position)
                 {
+                    End();
+                    break;
                     //INSERT LOOSE SHIT HERE
                 }
                 
@@ -105,7 +107,7 @@ namespace Projektet
                     {
                         if (!Body.Equals(snake2.Head) && snake2.bodies.Count > 3)
                         {
-                            End();// snek1 collides with itself
+                            End();// snek2 collides with itself
                             break;
                         }
                     }// snek2 collides with itself
@@ -115,6 +117,8 @@ namespace Projektet
             {
                 if (snake2.Head.Position == Body.Position)
                 {
+                    End();
+                    break;
                     // PLAYER 2 HIT PLAYER 1
                 }
                 if (snake.Head.Position == Body.Position)
