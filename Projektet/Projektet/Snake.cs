@@ -11,14 +11,17 @@ namespace Projektet
         //ISet<Rectangle> bodies = new HashSet<Rectangle>();
         List<Rectangle> bodies = new List<Rectangle>();
         private Rectangle head;
+
+        private int speed;
+
         public Snake(int x, int y)
         {
             head = new Rectangle(x, y);
         }
 
-        public void AddBody(int x, int y)
+        public void AddBody()
         {
-            var Body = new Rectangle(x, y);
+            var Body = new Rectangle(bodies[bodies.Count - 1].Point.X, bodies[bodies.Count - 1].Point.Y);
             bodies.Add(Body);
         }
         public void Move(int pressed)
@@ -29,7 +32,7 @@ namespace Projektet
         {
             get { return head; }
         }
-        private int speed;
+        
         public int Speed
         {
             get { return speed; }
