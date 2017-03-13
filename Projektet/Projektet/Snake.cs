@@ -26,6 +26,8 @@ namespace Projektet
             snakeTimer.Interval = 1000 / speed;
             snakeTimer.Tick += new EventHandler(Move);
             snakeTimer.Start();
+            AddBody();
+            AddBody();
         }
 
         public void AddBody()
