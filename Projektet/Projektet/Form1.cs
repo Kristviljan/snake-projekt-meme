@@ -22,7 +22,7 @@ namespace Projektet
             InitializeComponent();
         }
 
-        private void Update(object sender, PaintEventArgs e)
+        private void Update(object sender, System.EventArgs e)
         {
 
             this.BringToFront();
@@ -31,12 +31,12 @@ namespace Projektet
             this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
 
             g = flowLayoutPanel1.CreateGraphics();
-            g.FillRectangle(brush, 0, 0, 20, 20);
+            g.FillRectangle(brush, 0, 0, 10, 10);
 
             flowLayoutPanel1.Invalidate();
         }
 
-        private void UpdateScore(object sender, PaintEventArgs e)
+        private void UpdateScore(object sender, EventArgs e)
         {
 
         }
