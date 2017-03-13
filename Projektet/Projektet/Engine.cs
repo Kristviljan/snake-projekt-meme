@@ -107,6 +107,7 @@ namespace Projektet
                     snake.AddBody();
                     food.Eat(snake);
                     foods.Remove(food);
+                    End();
                     break;
                 }
             }
@@ -131,6 +132,14 @@ namespace Projektet
             {
                 food.Draw(args.Graphics);
             }
+        }
+        private void End()
+        {
+            foods.Clear();
+            snake.bodies.Clear();
+            timer.Stop();
+            form.Refresh();
+            form.BackColor = System.Drawing.Color.Black;
         }
     }
 }
