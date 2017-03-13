@@ -12,6 +12,10 @@ namespace Projektet
 {
     public partial class Form1 : Form
     {
+        Graphics g;
+        SolidBrush brush = new SolidBrush(Color.Black);
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +27,8 @@ namespace Projektet
             this.Focus();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(flowLayoutPanel1_Paint_KeyDown);
+            g = flowLayoutPanel1.CreateGraphics();
+            g.FillRectangle(brush, 40, 40, 40, 40);
 
             
         }
