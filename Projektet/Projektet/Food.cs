@@ -37,21 +37,21 @@ namespace Projektet
         }
         public void Eat(Snake snek)
         {
-            if ((int)this.type == 1)
+            if (this.type >= 0 && this.type <= 33)
             {
                 snek.points++;
             }
-            else if ((int)type == 2)
+            else if (this.type > 33 && this.type <= 66)
             {
                 snek.points += 5;
             }
-            else if ((int)type == 3)
+            else if (this.type > 66 && this.type <= 99)
             {
                 snek.Speed += 5;
             }
-            else if ((int)type == 4)
+            else if (this.type > 99 && this.type <= 132)
             {
-                snek.Speed -= 5; 
+                snek.Speed -= 5;
             }
         }
         /*override public void Draw(Graphics g)
