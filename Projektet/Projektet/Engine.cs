@@ -97,6 +97,8 @@ namespace Projektet
             {
                 if (snake.Head.Position == Body.Position)
                 {
+                    snake.points -= 10;
+                    snake2.points += 10;
                     End();
                     break;
                     //INSERT LOOSE SHIT HERE
@@ -108,6 +110,7 @@ namespace Projektet
                     {
                         if (!Body.Equals(snake2.Head) && snake2.bodies.Count > 3)
                         {
+                            snake2.points -= 5;
                             End();// snek2 collides with itself
                             break;
                         }
@@ -118,6 +121,8 @@ namespace Projektet
             {
                 if (snake2.Head.Position == Body.Position)
                 {
+                    snake2.points -= 10;
+                    snake.points += 10;
                     End();
                     break;
                     // PLAYER 2 HIT PLAYER 1
@@ -126,6 +131,7 @@ namespace Projektet
                 {
                     if (!Body.Equals(snake.Head) && snake.bodies.Count > 3)
                     {
+                        snake.points -= 5;
                         End();// snek1 collides with itself
                         break;
                     }
