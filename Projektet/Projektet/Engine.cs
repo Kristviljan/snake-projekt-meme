@@ -86,7 +86,7 @@ namespace Projektet
         {
             if (foods.Count < 5)
             {
-                var food = new Food(20 * random.Next(2, 30), 20 * random.Next(2, 20), random.Next(0, 165));
+                var food = new Food(10 * random.Next(2, 79), 10 * random.Next(2, 59), random.Next(0, 165));
                 foods.Add(food);
             }
         }
