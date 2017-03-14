@@ -186,9 +186,13 @@ namespace Projektet
         {
             foods.Clear();
             snake.bodies.Clear();
+            snake2.bodies.Clear();
             timer.Stop();
             form.Refresh();
             form.BackColor = System.Drawing.Color.Black;
+
+            form.End(snake.points, snake2.points);
+
         }
     }
 }

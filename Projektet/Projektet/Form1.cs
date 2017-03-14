@@ -60,6 +60,22 @@ namespace Projektet
             label7.Text = score2.ToString();
         }
 
+        public void End(int score1, int score2)
+        {
+            if (score1 > score2)
+            {
+                label8.Text = "Player 1 wins with " + score1.ToString() + " score. Player 2 had " + score2.ToString() + "." ;
+            }
+            else if (score2 > score1)
+            {
+                label8.Text = "Player 2 wins with " + score2.ToString() + " score. Player 1 had " + score1.ToString() + ".";
+            }
+            else if (score1 == score2)
+            {
+                label8.Text = "It's a tie! Both players had " + score1.ToString() + " points.";
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
